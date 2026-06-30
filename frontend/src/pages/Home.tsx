@@ -11,13 +11,40 @@ export default function Home() {
       <div className="container flex flex-col items-center justify-center home-container page-with-sidebar">
         
         <h1 className="title">Candidate Transformer</h1>
-        <p className="subtitle">Select an extraction mode to begin.</p>
-        <p className="description">
-          Candidate Transformer is an AI-powered resume intelligence platform.<br/>
-          It seamlessly extracts, normalizes, and enriches candidate data into a beautifully structured format.
-        </p>
+        <p className="subtitle">Transforming unstructured resumes into verified, actionable intelligence.</p>
+        <div className="infographic-flow">
+          <div className="flow-step">
+            <div className="step-icon step-1">📥</div>
+            <span>Ingestion & Parsing</span>
+          </div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step">
+            <div className="step-icon step-2">⚙️</div>
+            <span>Extraction</span>
+          </div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step">
+            <div className="step-icon step-3">✨</div>
+            <span>Normalization</span>
+          </div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step">
+            <div className="step-icon step-4">🔗</div>
+            <span>Merge & Resolve</span>
+          </div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step">
+            <div className="step-icon step-5">🎯</div>
+            <span>Dynamic Projection</span>
+          </div>
+          <div className="flow-arrow">→</div>
+          <div className="flow-step">
+            <div className="step-icon step-6">✅</div>
+            <span>Validation</span>
+          </div>
+        </div>
         
-        <div className="flex gap-8 cards-wrapper mt-12">
+        <div className="flex gap-8 justify-center cards-wrapper mt-12">
           {/* Card A */}
           <div 
             className="glass-panel flex-col mode-card float-effect"

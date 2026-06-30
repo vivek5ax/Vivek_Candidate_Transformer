@@ -10,12 +10,67 @@
   max-width: 100%;
 }
 
-.description {
-  font-size: 1.15rem;
-  color: #94a3b8;
-  max-width: 600px;
-  line-height: 1.6;
-  margin-top: 1rem;
+.infographic-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 3rem 0;
+  flex-wrap: wrap;
+  max-width: 95%;
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  min-width: 130px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+}
+
+.step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+/* Distinct colors for each step based on the provided image */
+.step-1 { background: #3b82f6; } /* Blue */
+.step-2 { background: #10b981; } /* Green */
+.step-3 { background: #f59e0b; } /* Orange */
+.step-4 { background: #8b5cf6; } /* Purple */
+.step-5 { background: #ef4444; } /* Red */
+.step-6 { background: #14b8a6; } /* Teal */
+
+.flow-step span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.02em;
+}
+
+.flow-arrow {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .title {
@@ -38,7 +93,8 @@
 
 .subtitle {
   font-size: 1.1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
+  color: #94a3b8;
 }
 
 .cards-wrapper {
@@ -47,8 +103,10 @@
 }
 
 .mode-card {
-  flex: 1;
-  min-width: 300px;
+  flex: 0 1 320px;
+  max-width: 320px;
+  min-height: 280px;
+  padding: 1.5rem;
   cursor: pointer;
   text-align: left;
   display: flex;
