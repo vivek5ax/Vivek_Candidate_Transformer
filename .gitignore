@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+
+.venv/
+
+node_modules/
+
+.env
+
+dist/
+
+build/
+
+logs/
+
+.vscode/
+
+# Testing and Caches
+.pytest_cache/
+tests/
+.coverage
+
+# Documentation and Samples
+docs/
+sample_inputs/
+sample_outputs/
+
+# OS specific
+.DS_Store

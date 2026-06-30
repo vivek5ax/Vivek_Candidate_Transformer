@@ -1,0 +1,121 @@
+.upload-page {
+  padding-top: 4rem;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--bg-panel);
+  color: var(--text-primary);
+}
+
+.error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.upload-zones {
+  width: 100%;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.drop-zone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  cursor: pointer;
+  border: 2px dashed var(--border-color);
+  text-align: center;
+}
+
+.drop-zone:hover {
+  border-color: var(--accent);
+  background: var(--bg-panel-hover);
+}
+
+.drop-zone.has-file {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+/* ── Drag-active glow ── */
+.drop-zone.drag-active {
+  border-color: var(--accent);
+  border-style: dashed;
+  border-width: 2.5px;
+  background: rgba(59, 130, 246, 0.08);
+  box-shadow:
+    0 0 12px rgba(59, 130, 246, 0.35),
+    0 0 30px rgba(59, 130, 246, 0.15),
+    inset 0 0 20px rgba(59, 130, 246, 0.06);
+  animation: dropzone-pulse 1.2s ease-in-out infinite;
+  transform: scale(1.01);
+}
+
+@keyframes dropzone-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 12px rgba(59, 130, 246, 0.35),
+      0 0 30px rgba(59, 130, 246, 0.15),
+      inset 0 0 20px rgba(59, 130, 246, 0.06);
+    border-color: rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.55),
+      0 0 50px rgba(59, 130, 246, 0.25),
+      inset 0 0 30px rgba(59, 130, 246, 0.1);
+    border-color: rgba(99, 160, 255, 0.9);
+  }
+}
+
+.zone-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.drop-zone h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.drop-zone p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.limit {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.extract-btn {
+  font-size: 1.1rem;
+  padding: 12px 32px;
+  min-width: 200px;
+}
